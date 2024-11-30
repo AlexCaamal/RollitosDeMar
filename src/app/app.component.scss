@@ -1,0 +1,18 @@
+/* Imagen del logo */
+.navbarlc img {
+  width: 50px;
+  height: auto;
+  margin-right: 15px; /* Separación del texto */
+  border-radius: 10px; /* Borde redondeado */
+}
+
+/* Ajustes para dispositivos pequeños */
+@media (max-width: 768px) {
+
+  .navbarlc img {
+    width: 40px; /* Reduce el tamaño del logo */
+    margin: 0 auto 10px auto; /* Centra el logo */
+  }
+}
+
+  

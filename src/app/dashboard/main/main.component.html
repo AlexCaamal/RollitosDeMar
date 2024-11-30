@@ -1,11 +1,61 @@
-<p>main works!</p>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-hola
-<a href="https://aufit.net/main">aufit</a>
+<mat-sidenav-container class="sidenav-container">
+    <!-- Menú lateral -->
+    <mat-sidenav
+      #sidenav
+      [mode]="isSmallScreen ? 'over' : 'side'"
+      [opened]="!isSmallScreen"
+      class="sidenav"
+    >
+      <mat-toolbar color="primary">
+        <div class="toolbar-content">
+            <span class="text-red">Redes</span>
+            <span class="text-sociales">Sociales</span>
+          </div>
+        <button *ngIf="isSmallScreen" mat-icon-button (click)="sidenav.close()">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-toolbar>
+      <mat-nav-list>
+        <a mat-list-item href="https://www.facebook.com/share/14dDrkBDMA/" target="_blank" rel="noopener noreferrer">
+          <img src="../../../../assets/Images/facebookCirculoAzul.png" alt="Facebook" style="width: 32px; height: auto;" />
+          &nbsp;<span *ngIf="!isSmallScreen" class="letraTitulos redes-texto" style="position: relative; top: -10px;">Facebook</span>
+        </a>
+        <a mat-list-item href="https://www.instagram.com/rollito_mar" target="_blank" rel="noopener noreferrer">
+          <img src="../../../../assets/Images/instagramCirculo.png" alt="Instagram" style="width: 32px; height: auto;" />
+          &nbsp;<span *ngIf="!isSmallScreen" class="letraTitulos redes-texto" style="position: relative; top: -10px;">Instagram</span>
+        </a>
+        <a mat-list-item href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
+          <img src="../../../../assets/Images/tik-tokCirculo.png" alt="TikTok" style="width: 32px; height: auto;" />
+          &nbsp;<span *ngIf="!isSmallScreen" class="letraTitulos redes-texto" style="position: relative; top: -10px;">Tiktok</span>
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+  
+    <!-- Contenido principal -->
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+        <button *ngIf="isSmallScreen" mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </mat-toolbar>
+      <div class="content">
+        <div class="carousel-container">
+          <div class="carousel">
+            <div class="image-item">
+              <img src="../../../../assets/Images/queso.png" alt="Imagen 1" />
+            </div>
+            <div class="image-item">
+              <img src="../../../../assets/Images/verdura.png" alt="Imagen 2" />
+            </div>
+            <div class="image-item">
+              <img src="../../../../assets/Images/tocinoDos.png" alt="Imagen 3" />
+            </div>
+          </div>
+          <div class="floating-notice">
+            Camarones con queso y tocino
+          </div>
+        </div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
