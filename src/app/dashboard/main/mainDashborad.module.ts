@@ -6,9 +6,10 @@ import { mainDashboradRoutes } from './mainDashborad.routes';
 import { MaterialModule } from '../../../utils/material.module';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MainComponent } from './main.component';
+import { ConocenosComponent } from '../conocenos/conocenos.component';
 
 @NgModule({
-  declarations: [MainComponent],
+  declarations: [MainComponent, ConocenosComponent],
   imports: [
     FormsModule,
     CommonModule,

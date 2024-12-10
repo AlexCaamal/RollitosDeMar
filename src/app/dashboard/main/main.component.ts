@@ -1,5 +1,9 @@
 import { Component,HostListener, OnInit  } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { DataSharedService } from '../../../service/data-shared.service';
+import { Menu } from '../../../Model/menu';
+import { Observable } from 'rxjs';
+import { StorageService } from '../../../service/storage.service';
 
 @Component({
   selector: 'app-main',
@@ -7,8 +11,30 @@ import { MatSidenav } from '@angular/material/sidenav';
   styleUrl: './main.component.scss'
 })
 
-export class MainComponent {
+export class MainComponent implements OnInit{
   isSmallScreen: boolean = false;
+  menu?:Menu | undefined;
+  conocenos = false;
+
+  constructor(private _dataService: DataSharedService, private _service: StorageService,){}
+
+  ngOnInit(): void {
+    this._dataService.get().subscribe((estado: boolean) => {
+      this.conocenos = estado; // Actualiza el estado local
+      console.log('Estado recibido:', estado);
+    });
+
+    const menu = this._service.getStorage();
+
+    if (!menu) {
+      this.menu = new Menu();
+      this.menu.main = true;
+
+
+    } else {
+      this.menu = menu;
+    }
+  }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
@@ -23,10 +49,14 @@ export class MainComponent {
     console.log('Sidebar cerrado');
   }
 
+  goConocemos(){
+    if(this.menu === undefined){
+      return;
+    }
 
-  onButtonClick(): void {
-    console.log("Botón flotante presionado");
-    // Aquí puedes agregar la lógica que desees, como redirigir a otra página o mostrar un mensaje.
+    this.menu.conocenos = true;
+    this.menu.main = false;
+    this._service.setMenu(this.menu);
+    return this.conocenos = !this.conocenos ;
   }
-
 }
