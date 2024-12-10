@@ -2,354 +2,303 @@
 @use "../../../scss/mixins" as m;
 
 .letraNormal {
-    font-family: "Hiragino_Kaku_W3", sans-serif;
-    @include m.Mini {
-      font-size: 0.7rem;
-    }
-    @include m.Minitelefono {
-      font-size: 0.0.7rem;
-    }
-  
-    @include m.telefono {
-      font-size: 0.7rem;
-    }
-    @include m.tablet {
-      font-size: 0.8rem;
-    }
-    @include m.desktop {
-      font-size: 0.8rem;
-    }
-    @include m.desktopxl {
-      font-size: 1rem;
-    }
+  font-family: "Hiragino_Kaku_W3", sans-serif;
+  @include m.Mini {
+    font-size: 0.7rem;
   }
-  
-  .letraTitulos {
-    font-family: "Hiragino_Kaku_W6", sans-serif;
-    @include m.Mini {
-      font-size: 0.7rem;
-    }
-    @include m.Minitelefono {
-      font-size: 0.8rem;
-    }
-    @include m.telefono {
-      font-size: 0.8rem;
-    }
-    @include m.tablet {
-      font-size: 0.9rem;
-    }
-    @include m.desktop {
-      font-size: 0.9rem;
-    }
-    @include m.desktopxl {
-      font-size: 1.1rem;
-    }
+  @include m.Minitelefono {
+    font-size: 0.7rem;
   }
-  
-  .letraW8 {
-    font-family: "Hiragino_Kaku_W8", sans-serif;
-    font-size: 1.5rem;
-    @include m.Mini {
-      font-size: 0.8rem;
-    }
-    @include m.Minitelefono {
-      font-size: 0.9rem;
-    }
-  
-    @include m.telefono {
-      font-size: 1.1rem;
-    }
-    @include m.tablet {
-      font-size: 1.2rem;
-    }
-    @include m.desktop {
-      font-size: 1.2rem;
-    }
-    @include m.desktopxl {
-      font-size: 1.2rem;
-    }
+
+  @include m.telefono {
+    font-size: 0.7rem;
   }
-  
+  @include m.tablet {
+    font-size: 0.8rem;
+  }
+  @include m.desktop {
+    font-size: 0.8rem;
+  }
+  @include m.desktopxl {
+    font-size: 1rem;
+  }
+}
+
+.letraTitulos {
+  font-family: "Hiragino_Kaku_W6", sans-serif;
+  @include m.Mini {
+    font-size: 0.7rem;
+  }
+  @include m.Minitelefono {
+    font-size: 0.8rem;
+  }
+  @include m.telefono {
+    font-size: 0.8rem;
+  }
+  @include m.tablet {
+    font-size: 0.9rem;
+  }
+  @include m.desktop {
+    font-size: 0.9rem;
+  }
+  @include m.desktopxl {
+    font-size: 1.1rem;
+  }
+}
+
+.letraW8 {
+  font-family: "Hiragino_Kaku_W8", sans-serif;
+  font-size: 1.5rem;
+  @include m.Mini {
+    font-size: 0.8rem;
+  }
+  @include m.Minitelefono {
+    font-size: 0.9rem;
+  }
+
+  @include m.telefono {
+    font-size: 1.1rem;
+  }
+  @include m.tablet {
+    font-size: 1.2rem;
+  }
+  @include m.desktop {
+    font-size: 1.2rem;
+  }
+  @include m.desktopxl {
+    font-size: 1.2rem;
+  }
+}
+
+.content {
+  @include m.desktopxl {
+    padding-top: 40%;
+    background-color: #333;
+  }
+}
+
 /**************************************Estilo general del contenedor********************************/
 .sidenav-container {
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
-    display: flex;
-    flex-direction: column;
-    font-family: "Hiragino_Kaku_W8", sans-serif;
-  }
-  
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  display: flex;
+  flex-direction: column;
+  font-family: "Hiragino_Kaku_W8", sans-serif;
+}
+
 /********************************************Menú lateral******************************************/
-  .sidenav {
-    width: 250px; /* Ancho del menú lateral */
-    height: 100%; /* Asegura que el sidenav tenga suficiente altura */
-    background-color: #8d8e8f; /* Fondo claro */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
-    padding-top: 80px; /* Da un poco de espacio al principio del sidenav */
-  }
+.sidenav {
+  width: 250px; /* Ancho del menú lateral */
+  height: 100%; /* Asegura que el sidenav tenga suficiente altura */
+  background-color: #8d8e8f; /* Fondo claro */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+  padding-top: 80px; /* Da un poco de espacio al principio del sidenav */
+}
 
 /****************************************Encabezado del menú*************************************/
 .sidenav mat-toolbar {
-    font-size: 1.5rem; /* Tamaño de fuente por defecto */
-    color: white;
-    background-color: #8d8e8f; /* Azul Material Design */
-    display: flex;
-    justify-content: center; /* Centra el contenido */
-    align-items: center;
-    transition: font-size 0.3s ease; /* Animación suave al cambiar el tamaño de la fuente */
-    font-family: "Hiragino_Kaku_W8", sans-serif;
-  }
-  
-  .sidenav mat-toolbar .toolbar-content {
-    display: flex;
-    flex-direction: row; /* Alineación horizontal por defecto */
-    justify-content: center;
-    align-items: center;
-  }
-  
+  font-size: 1.5rem; /* Tamaño de fuente por defecto */
+  color: white;
+  background-color: #8d8e8f; /* Azul Material Design */
+  display: flex;
+  justify-content: center; /* Centra el contenido */
+  align-items: center;
+  transition: font-size 0.3s ease; /* Animación suave al cambiar el tamaño de la fuente */
+  font-family: "Hiragino_Kaku_W8", sans-serif;
+}
+
+.sidenav mat-toolbar .toolbar-content {
+  display: flex;
+  flex-direction: row; /* Alineación horizontal por defecto */
+  justify-content: center;
+  align-items: center;
+}
+
 /* Espaciado usando word-spacing (si están en un solo elemento) */
 .text-container {
+  word-spacing: 15px; /* Espacio entre palabras */
+}
+
+/* Espaciado usando margin (si están en elementos separados) */
+.toolbar-contentspan {
+  margin-right: 10px; /* Espacio entre palabras */
+}
+
+.toolbar-content span:last-child {
+  margin-right: 0; /* Evita espacio extra después de la última palabra */
+}
+
+@media (min-width: 601px) {
+  .toolbar-content {
     word-spacing: 15px; /* Espacio entre palabras */
   }
-  
-  /* Espaciado usando margin (si están en elementos separados) */
-  .toolbar-contentspan {
+
+  .toolbar-content span {
     margin-right: 10px; /* Espacio entre palabras */
   }
-  
-  .toolbar-content span:last-child {
-    margin-right: 0; /* Evita espacio extra después de la última palabra */
+}
+
+/* Media Query para pantallas pequeñas (teléfonos) */
+@media (max-width: 600px) {
+  .sidenav mat-toolbar .toolbar-content {
+    flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    text-align: center; /* Asegura que el texto esté centrado */
   }
 
-  @media (min-width: 601px) {
-    .toolbar-content {
-      word-spacing: 15px; /* Espacio entre palabras */
-    }
-  
-    .toolbar-content span {
-      margin-right: 10px; /* Espacio entre palabras */
-    }
+  .sidenav mat-toolbar {
+    font-size: 0.5rem; /* Tamaño de fuente reducido en pantallas pequeñas */
   }
-  
-  /* Media Query para pantallas pequeñas (teléfonos) */
-  @media (max-width: 600px) {
-    .sidenav mat-toolbar .toolbar-content {
-      flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
-      text-align: center; /* Asegura que el texto esté centrado */
-    }
-  
-    .sidenav mat-toolbar {
-      font-size: 0.5rem; /* Tamaño de fuente reducido en pantallas pequeñas */
-    }
-  
-    .text-red, .text-sociales {
-      transform: scale(1.5); /* Puedes ajustar el tamaño de la palabra si lo necesitas */
-      font-family: "Hiragino_Kaku_W8", sans-serif;
-    }
-  
-    .text-sociales {
-      margin-top: 2px; /* Espacio entre las dos palabras */
-      font-family: "Hiragino_Kaku_W8", sans-serif;
-    }
+
+  .text-red,
+  .text-sociales {
+    transform: scale(
+      1.5
+    ); /* Puedes ajustar el tamaño de la palabra si lo necesitas */
+    font-family: "Hiragino_Kaku_W8", sans-serif;
   }
-  
+
+  .text-sociales {
+    margin-top: 2px; /* Espacio entre las dos palabras */
+    font-family: "Hiragino_Kaku_W8", sans-serif;
+  }
+}
+
 /*****************************************Lista de navegación***********************************/
 .sidenav mat-nav-list {
-    padding: 10px 16px;
-  }
-  
-  @media (max-width: 768px) {
-    mat-sidenav .mat-nav-list a img {
-      width: 10px; /* Ajusta el tamaño de la imagen para pantallas pequeñas */
-      height: auto;
-      margin: 0; /* Elimina el margen si es necesario */
-    }
-  
-/* Centrar las imágenes en pantallas pequeñas */
-    .sidenav a {
-      display: flex;
-      justify-content: center; /* Centra la imagen horizontalmente */
-      align-items: center; /* Centra la imagen verticalmente */
-      padding: 10px 10px;
-      font-size: 5rem;
-      text-decoration: none;
-      color: #333;
-      border-radius: 8px;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    
-/* Ocultar el texto en pantallas pequeñas */
-    .letraTitulos {
-      display: none;
-    }
-  }
-  
-/* Efecto hover en los enlaces */
-  .sidenav a:hover {
-    background-color: #e8eaf6; /* Fondo azul claro al pasar el cursor */
-    color: #3f51b5; /* Texto azul al pasar el cursor */
-  }
-  
-/*****************************************Contenido principal*****************************************/
-  mat-sidenav-content {
-    background-color: #fafafa;
-    padding: 5px;
-    transition: margin-left 0.3s;
-  }
-  
-  .content {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-  }
-  
-/***********************************Contenedor principal del carrusel********************************/
-.carousel-container {
-    position: relative;
-    width: 100%; /* Ancho del contenedor */
-    overflow: hidden; /* Oculta el desbordamiento */
-    gap: 10px;
-    border-radius: 20px;
-  }
-  
-  /* Contenedor de las imágenes (carrusel) */
-  .carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out; /* Transición suave para el deslizamiento */
-    gap: 10px;
-    margin: 10px;
-    margin-top: 50px; /* Añade margen superior para bajar las imágenes */
-    border-radius: 20px;
-  }
+  padding: 10px 16px;
+}
 
-  /* Ajustes para pantallas de teléfonos celulares */
-  @media (max-width: 768px) {
-    .carousel {
-      margin-top: 0.5px; /* Reduce el margen superior */
-    }
-  }
-  
-  /* Elementos individuales del carrusel con diferentes tamaños */
-  .image-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    border-radius: 20px; /* Borde redondeado por defecto */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para hover */
-  }
-  
-  /* Ajustes específicos para imágenes individuales */
-  .image-item:nth-child(1) img {
-    width: 100%; /* Tamaño específico para la primera imagen */
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px; /* Borde redondeado de la imagen */
-  }
-  
-  .image-item:nth-child(2) img {
-    width: 90%; /* Tamaño específico para la segunda imagen */
-    height: auto;
-    object-fit: cover;
-    border-radius: 20px; /* Borde redondeado de la imagen */
-  }
-  
-  .image-item:nth-child(3) img {
-    width: 100%; /* Ocupa el 100% del contenedor */
-    height: 100%; /* Ocupa el 100% del contenedor */
-    object-fit: cover; /* Hace que la imagen cubra el espacio sin deformarse */
-    border-radius: 20px; /* Borde redondeado de la imagen */
-  }
-  
-  /* Efecto Hover */
-  .image-item:hover {
-    transform: scale(1.05); /* Efecto de agrandamiento */
-    box-shadow: 0 8px 15px rgba(5, 5, 5, 0.3); /* Agrega sombra cuando pasa el cursor */
-    border-radius: 20px;
-  }
-  
-  .image-item img:hover {
-    transform: scale(1.1); /* Efecto de zoom cuando el cursor pasa sobre la imagen */
-    border-radius: 20px;
-  }
-
-  /* Ajustes para pantallas de teléfonos celulares */
 @media (max-width: 768px) {
-    .carousel {
-      margin-top: 0; /* Elimina o reduce el margen superior */
-    }
-  
-    .image-item img {
-      width: 1000%; /* Aumenta el ancho al 120% del contenedor */
-      height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
-      object-fit: cover; /* Cubre el espacio sin deformar la imagen */
-    }
+  mat-sidenav .mat-nav-list a img {
+    width: 10px; /* Ajusta el tamaño de la imagen para pantallas pequeñas */
+    height: auto;
+    margin: 0; /* Elimina el margen si es necesario */
   }
-  
 
-  /* Media Query para pantallas pequeñas (teléfonos) */
-  @media (max-width: 768px) {
-    .image-item:nth-child(1) img {
-      width: 100%; /* Hacer la primera imagen un poco más grande */
-      height: 200%;
-    }
-  
-    .image-item:nth-child(2) img {
-      width: 100%; /* Aumentar el tamaño de la segunda imagen */
-      height: auto;
-    }
-  
-    .image-item:nth-child(3) img {
-      width: 100%; /* Hacer la tercera imagen un poco más grande */
-      height: 200%;
-    }
+  /* Centrar las imágenes en pantallas pequeñas */
+  .sidenav a {
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra la imagen verticalmente */
+    padding: 10px 10px;
+    font-size: 5rem;
+    text-decoration: none;
+    color: #333;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
   }
-  
+
+  /* Ocultar el texto en pantallas pequeñas */
+  .letraTitulos {
+    display: none;
+  }
+}
+
+/* Efecto hover en los enlaces */
+.sidenav a:hover {
+  background-color: #e8eaf6; /* Fondo azul claro al pasar el cursor */
+  color: #3f51b5; /* Texto azul al pasar el cursor */
+}
+
+/*****************************************Contenido principal*****************************************/
+mat-sidenav-content {
+  background-color: #fafafa;
+  padding: 5px;
+  // transition: margin-left 0.3s;
+}
+
+/* Ajustes específicos para imágenes individuales */
+.image-item:nth-child(1) img {
+  width: 100%; /* Tamaño específico para la primera imagen */
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px; /* Borde redondeado de la imagen */
+}
+
+.image-item:nth-child(2) img {
+  width: 90%; /* Tamaño específico para la segunda imagen */
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px; /* Borde redondeado de la imagen */
+}
+
+.image-item:nth-child(3) img {
+  width: 100%; /* Ocupa el 100% del contenedor */
+  height: 100%; /* Ocupa el 100% del contenedor */
+  object-fit: cover; /* Hace que la imagen cubra el espacio sin deformarse */
+  border-radius: 20px; /* Borde redondeado de la imagen */
+}
+
+/* Efecto Hover */
+.image-item:hover {
+  transform: scale(1.05); /* Efecto de agrandamiento */
+  box-shadow: 0 8px 15px rgba(5, 5, 5, 0.3); /* Agrega sombra cuando pasa el cursor */
+  border-radius: 20px;
+}
+
+.image-item img:hover {
+  transform: scale(
+    1.1
+  ); /* Efecto de zoom cuando el cursor pasa sobre la imagen */
+  border-radius: 20px;
+}
+
+/* Ajustes para pantallas de teléfonos celulares */
+@media (max-width: 768px) {
+  .image-item img {
+    width: 100%; /* Aumenta el ancho al 120% del contenedor */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    object-fit: cover; /* Cubre el espacio sin deformar la imagen */
+  }
+}
+
+/* Media Query para pantallas pequeñas (teléfonos) */
+@media (max-width: 768px) {
+  .image-item:nth-child(1) img {
+    width: 100%; /* Hacer la primera imagen un poco más grande */
+    height: 200%;
+  }
+
+  .image-item:nth-child(2) img {
+    width: 100%; /* Aumentar el tamaño de la segunda imagen */
+    height: auto;
+  }
+
+  .image-item:nth-child(3) img {
+    width: 100%; /* Hacer la tercera imagen un poco más grande */
+    height: 200%;
+  }
+}
+
 /* Aviso flotante */
 .floating-notice {
-    position: absolute;
-    bottom: 0; /* Coloca el aviso al fondo de la imagen */
-    left: 50%; /* Centra horizontalmente */
-    transform: translateX(-60%); /* Ajusta la posición horizontal */
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
-    color: white; /* Color del texto */
-    z-index: 10; /* Asegura que esté encima de las imágenes */
-    padding: 20px 20px; /* Espaciado del aviso */
-    border-radius: 8px; /* Bordes redondeados opcionales */
-    font-size: 20px; /* Tamaño de letra */
-    text-align: center; /* Centra el texto dentro del aviso */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para resaltarlo */
-    font-family: "Hiragino_Kaku_W8", sans-serif;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  color: white; /* Color del texto */
+  padding: 20px 20px; /* Espaciado del aviso */
+  border-radius: 8px; /* Bordes redondeados opcionales */
+  font-size: 20px; /* Tamaño de letra */
+  text-align: center; /* Centra el texto dentro del aviso */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para resaltarlo */
+  font-family: "Hiragino_Kaku_W8", sans-serif;
 }
-  
+
 /* Media Query para dispositivos móviles */
 @media (max-width: 768px) {
-    .carousel {
-        flex-direction: column; /* Cambia las imágenes de horizontal a vertical */
-        align-items: center; /* Centra las imágenes verticalmente */
-    }
-  
-    .image-item {
-        margin-bottom: 10px; /* Espaciado entre imágenes */
-    }
-  
-    .floating-notice {
-        position: fixed; /* Fija el aviso en la pantalla */
-        bottom: 0; /* Sigue estando al fondo */
-        left: 50%; /* Centra horizontalmente */
-        transform: translateX(-35.5%); /* Ajusta la posición horizontal */
-        font-size: 16px; /* Ajusta el tamaño de la letra para pantallas pequeñas */
-        padding: 8px 10px; /* Reduce el padding para adaptarse al tamaño reducido */
-        width: 70%; /* Hace que el aviso ocupe todo el ancho */
-    }
+  .carousel {
+    flex-direction: column; /* Cambia las imágenes de horizontal a vertical */
+    align-items: center; /* Centra las imágenes verticalmente */
+  }
+
+  .image-item {
+    margin-bottom: 10px; /* Espaciado entre imágenes */
+  }
 }
-  
+
 /* Media Query para pantallas aún más pequeñas */
 @media (max-width: 480px) {
-    .floating-notice {
-        font-size: 12px; /* Reduce el tamaño de la letra */
-        padding: 6px 8px; /* Ajusta el padding para adaptarse a pantallas pequeñas */
-    }
+  .floating-notice {
+    font-size: 12px; /* Reduce el tamaño de la letra */
+    padding: 6px 8px; /* Ajusta el padding para adaptarse a pantallas pequeñas */
+  }
 }
 
 /* Estilos generales */
@@ -387,33 +336,27 @@
   }
 }
 
-  .mat-sidenav-content {
-    padding: 20px;
-    background-color: #fff;
-    transition: margin-left 0.3s ease-in-out;
-  }
-  
-  .social-icon {
-    width: 32px;
-    height: 32px;
-  }
-  
-  .redes-texto {
-    position: relative;
-    top: -5px;
-    font-size: 18px;
-    color: #fff;
-  }
-  
-  .carousel-container {
-    position: relative;
-  }
-  
-  .carousel {
-    display: flex;
-    overflow: hidden;
-    justify-content: center;
-    gap: 10px;
-    padding: 20px;
-  }
-  
+.mat-sidenav-content {
+  padding: 20px;
+  background-color: #fff;
+  // transition: margin-left 0.3s ease-in-out;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.redes-texto {
+  position: relative;
+  top: -5px;
+  font-size: 18px;
+  color: #fff;
+}
+.carousel {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}

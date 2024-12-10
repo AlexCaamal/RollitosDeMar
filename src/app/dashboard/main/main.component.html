@@ -1,60 +1,143 @@
 <mat-sidenav-container class="sidenav-container">
-    <!-- Menú lateral -->
-    <mat-sidenav
-      #sidenav
-      [mode]="isSmallScreen ? 'over' : 'side'"
-      [opened]="!isSmallScreen"
-      class="sidenav"
-    >
-      <mat-toolbar color="primary">
-        <div class="toolbar-content">
-            <span class="text-red">Redes</span>
-            <span class="text-sociales">Sociales</span>
-          </div>
-        <button *ngIf="isSmallScreen" mat-icon-button (click)="sidenav.close()">
-          <mat-icon>close</mat-icon>
-        </button>
-      </mat-toolbar>
-      <mat-nav-list>
-        <a mat-list-item href="https://www.facebook.com/share/14dDrkBDMA/" target="_blank" rel="noopener noreferrer">
-          <img src="../../../../assets/Images/facebookCirculoAzul.png" alt="Facebook" style="width: 32px; height: auto;" />
-          &nbsp;<span *ngIf="!isSmallScreen" class="letraTitulos redes-texto" style="position: relative; top: -10px;">Facebook</span>
-        </a>
-        <a mat-list-item href="https://www.instagram.com/rollito_mar" target="_blank" rel="noopener noreferrer">
-          <img src="../../../../assets/Images/instagramCirculo.png" alt="Instagram" style="width: 32px; height: auto;" />
-          &nbsp;<span *ngIf="!isSmallScreen" class="letraTitulos redes-texto" style="position: relative; top: -10px;">Instagram</span>
-        </a>
-        <a mat-list-item href="https://www.tiktok.com/@rollitos.de.mar?_t=8rbgiRD2iD2&_r=1" target="_blank" rel="noopener noreferrer">
-          <img src="../../../../assets/Images/tik-tokCirculo.png" alt="TikTok" style="width: 32px; height: auto;" />
-          &nbsp;<span *ngIf="!isSmallScreen" class="letraTitulos redes-texto" style="position: relative; top: -10px;">Tiktok</span>
-        </a>
-      </mat-nav-list>
-    </mat-sidenav>
-
-    <!-- Contenido principal -->
-    <mat-sidenav-content>
-      <mat-toolbar color="primary">
-        <button *ngIf="isSmallScreen" mat-icon-button (click)="sidenav.toggle()">
-          <mat-icon>menu</mat-icon>
-        </button>
-      </mat-toolbar>
-      <div class="content">
-        <div class="carousel-container">
-          <div class="carousel">
-            <div class="image-item">
-              <img src="../../../../assets/Images/queso.png" alt="Imagen 1" />
-            </div>
-            <div class="image-item">
-              <img src="../../../../assets/Images/verdura.png" alt="Imagen 2" />
-            </div>
-            <div class="image-item">
-              <img src="../../../../assets/Images/tocinoDos.png" alt="Imagen 3" />
-            </div>
-          </div>
-          <div class="floating-notice">
-            Camarones con queso y tocino
-          </div>
-        </div>
+  <!-- Menú lateral -->
+  <mat-sidenav
+    #sidenav
+    [mode]="isSmallScreen ? 'over' : 'side'"
+    [opened]="!isSmallScreen"
+    class="sidenav"
+  >
+    <mat-toolbar color="primary">
+      <div class="toolbar-content">
+        <span class="text-red">Redes</span>
+        <span class="text-sociales">Sociales</span>
       </div>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+      <button *ngIf="isSmallScreen" mat-icon-button (click)="sidenav.close()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-toolbar>
+    <mat-nav-list>
+      <a
+        mat-list-item
+        href="https://www.facebook.com/share/14dDrkBDMA/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="../../../../assets/Images/facebookCirculoAzul.png"
+          alt="Facebook"
+          style="width: 32px; height: auto"
+        />
+        &nbsp;<span
+          *ngIf="!isSmallScreen"
+          class="letraTitulos redes-texto"
+          style="position: relative; top: -10px"
+          >Facebook</span
+        >
+      </a>
+      <a
+        mat-list-item
+        href="https://www.instagram.com/rollito_mar"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="../../../../assets/Images/instagramCirculo.png"
+          alt="Instagram"
+          style="width: 32px; height: auto"
+        />
+        &nbsp;<span
+          *ngIf="!isSmallScreen"
+          class="letraTitulos redes-texto"
+          style="position: relative; top: -10px"
+          >Instagram</span
+        >
+      </a>
+      <a
+        mat-list-item
+        href="https://www.tiktok.com/@rollitos.de.mar?_t=8rbgiRD2iD2&_r=1"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="../../../../assets/Images/tik-tokCirculo.png"
+          alt="TikTok"
+          style="width: 32px; height: auto"
+        />
+        &nbsp;<span
+          *ngIf="!isSmallScreen"
+          class="letraTitulos redes-texto"
+          style="position: relative; top: -10px"
+          >Tiktok</span
+        >
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Contenido principal -->
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button *ngIf="isSmallScreen" mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+    <div style="width: 100%; text-align:  center;">
+      <h1 class="floating-notice">Camarones con queso y tocino</h1>
+    </div>
+    <div style="width: 100%; height: 25px;">
+      <h2>Misión</h2>
+      <p style="text-align: justify">
+        <span style="text-align: justify">
+          Llevar a cada mesa un platillo que combine lo mejor del mar y la
+          cocina creativa. Queremos que cada bocado de nuestros rollitos de
+          camarón, tocino y queso sea una explosión de sabor que sorprende y
+          conquista paladares. Nos encanta ser parte de esos momentos especiales
+          donde el buen comer une a las personas.
+        </span>
+      </p>
+      <h2>Visión</h2>
+      <p style="text-align: justify">
+        <span style="text-align: justify">
+          Ser la marca favorita cuando se trata de disfrutar algo diferente,
+          delicioso y lleno de sabor. Queremos que nuestros rollitos sean
+          conocidos en todos lados como el mejor ejemplo de que lo simple y
+          delicioso siempre es la mejor opción. ¡Del mar a tu paladar, un sabor
+          sin igual!
+        </span>
+      </p>
+      <h2>Descripción del Producto</h2>
+      <p style="text-align: justify">
+        <span style="text-align: justify">
+          Nuestros rollitos de mar son el antojo que no sabías que necesitabas.
+          Imagínate: camarones frescos, rellenos de queso derretido y envueltos
+          en tocino doradito. Es la combinación perfecta de sabores del mar y
+          tierra, ideal para disfrutar en cualquier momento, ya sea en
+          reuniones, comidas familiares o simplemente porque sí. ¡Cada bocado es
+          puro placer!
+        </span>
+      </p>
+      <h2>Descripción del Negocio</h2>
+      <p style="text-align: justify">
+        <span style="text-align: justify">
+          Somos un negocio que vive para darle sabor a tus días. Nos encanta
+          llevar hasta ti lo mejor del mar con un toque creativo que sorprenda a
+          tu paladar. Aquí nos apasiona hacer las cosas bien: ingredientes
+          frescos, recetas irresistibles y el objetivo de que disfrutes cada
+          momento con nuestros rollitos. Queremos ser tu primera opción cuando
+          pienses en algo rico, práctico y lleno de sazón. ¡Porque el buen comer
+          siempre es mejor con un toque único!
+        </span>
+      </p>
+     <div style="width: 95%; text-align: center;" class="carousel">
+      <div class="image-item">
+        <img src="../../../../assets/Images/queso.png" alt="Imagen 1" />
+      </div>
+      <div class="image-item">
+        <img src="../../../../assets/Images/verdura.png" alt="Imagen 2" />
+      </div>
+      <div class="image-item">
+        <img src="../../../../assets/Images/tocinoDos.png" alt="Imagen 3" />
+      </div>
+     </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
